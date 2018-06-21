@@ -4,13 +4,17 @@ package sample.service;
 import javafx.application.Application;
 import sample.service.applicatif.resources.ResourceSA;
 import sample.service.applicatif.resources.resourceSAImpl;
+import sample.service.applicatif.server.ServerSA;
+import sample.service.applicatif.server.ServerSAImpl;
 
 // responsable d'instancier tous les singletons
 public class CommonInjector {
 
     private static CommonInjector commonInjectorInstance = new CommonInjector();
+
     private Application application = null;
     private ResourceSA resourceSA;
+    private ServerSA serverSA;
 
     public static synchronized CommonInjector getInstance() {
         if (commonInjectorInstance == null) {
@@ -38,6 +42,13 @@ public class CommonInjector {
             resourceSA = new resourceSAImpl();
         }
         return resourceSA;
+    }
+
+    public ServerSA injectServerSA() {
+        if (serverSA == null) {
+            serverSA = new ServerSAImpl();
+        }
+        return serverSA;
     }
 
 
