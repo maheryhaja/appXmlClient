@@ -1,8 +1,8 @@
-package sample.presentation.main;
+package sample.presentation.splash;
 
 import sample.presentation.generic.InitializableController;
 
-public class mainController implements InitializableController {
+public class SplashController implements InitializableController {
 
     @Override
     public void initialize() {
