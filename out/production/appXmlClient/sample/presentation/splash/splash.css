@@ -1,0 +1,4 @@
+#splashpane{
+    -fx-background-image: url("../../commun/res/img/splash.jpg");
+    -fx-background-size: 410 410;
+}
